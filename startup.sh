@@ -9,4 +9,4 @@ export KC_DB_URL=jdbc:postgresql://$(echo "$DATABASE_URL" | cut --delimiter=\@ -
 
 export KC_DB_USERNAME=postgres
 
-/opt/keycloak/bin/kc.sh start
+/opt/keycloak/bin/kc.sh start --optimized

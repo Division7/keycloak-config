@@ -16,5 +16,5 @@ ENV KC_DB=postgres
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
 COPY keycloak.conf /opt/keycloak/conf/keycloak.conf
 COPY startup.sh .
-
+EXPOSE 8080
 ENTRYPOINT ["/app/startup.sh"]
