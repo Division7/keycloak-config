@@ -14,6 +14,7 @@ FROM quay.io/keycloak/keycloak:latest
 WORKDIR /app
 ENV KC_DB=postgres
 COPY --from=builder /opt/keycloak/ /opt/keycloak/
+COPY keycloak.conf /opt/keycloak/conf/keycloak.conf
 COPY startup.sh .
 
 ENTRYPOINT ["/app/startup.sh"]
